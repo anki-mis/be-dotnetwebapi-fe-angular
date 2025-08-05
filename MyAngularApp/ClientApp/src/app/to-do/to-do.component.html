@@ -1,0 +1,17 @@
+<h1>{{ title }}</h1>
+<h2>To do list</h2>
+
+
+<ul *ngFor="let item of items">    
+    <li *ngIf="item.isComplete">       
+            <span class="d-inline-block w-50"> {{item.name}} </span>
+            
+            <span>  <button class="btn btn-primary mr-2" (click)="handleDelete(item)">Delete task</button> </span>
+    </li>
+</ul>
+
+<span>  <button class="btn btn-primary mr-2" (click)="toggleChildComponent()">Add task</button> </span>
+
+<add-item-component *ngIf="showChild" (valueEmitted)="receiveValueFromAddItem($event)"></add-item-component> 
+
+

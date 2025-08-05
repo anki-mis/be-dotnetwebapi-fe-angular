@@ -1,0 +1,22 @@
+<br />
+<br />
+
+<h3>Add item to the list</h3>
+
+<form [formGroup]="userForm" (ngSubmit)="onSubmit()">
+  
+  <div>
+  <label for="name">Name:</label>
+  <input type="text" id="name" formControlName="name">
+  </div>
+
+  <div>
+  <label for="isComplete">Is complete?</label>
+  <input type="text" id="isComplete" formControlName="isComplete">
+  </div>
+
+  <!-- 
+   <button type="submit" [disabled]="!userForm.valid" class="btn btn-primary mr-2">Submit</button>
+  -->  
+  <button type="submit" class="btn btn-primary mr-2">Submit</button>
+</form>
